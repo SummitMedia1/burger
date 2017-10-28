@@ -2,20 +2,20 @@ var mySQL = require('mysql');
 
 var connection = mysql.createConnection({
   port: 3306,
-  host: "localhost",
+  host: "127.0.0.1 || localhost",
   user: "root",
-  password: "root",
-  database: "seeds"
+  password: "",
+  database: "burgers_db"
 });
 
 //Connect to mysql
 
 connection.connect(function(err) {
   if err {
-    console.error('This connection errored: ' + err.stack);
+    console.error('ERROR: This connection errored: ' + err.stack + '\n\n');
     return;
   }
-    console.log('Your are connected on port ' + connection.threadId);
+    console.log('SUCCESS: You are connected as ID: ' + connection.threadId + '\n\n');
 });
 
 //Exports to ORM

@@ -10,20 +10,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+      * {
+        box-sizing: border-box;
+      }
 
+      body {
+        background-image: url('../../public/assets/img/background.png');
+        /*background-size: cover;*/
+        /*background-repeat: no-repeat;*/
+      }
+      </style>
 
   </head>
   <body>
     <div class="container">
       <div class="row">
-      <div class="col s3">
+      <div class="col s12" align="center">
         <img src="../../public/assets/img/eatdaburger.png" alt="Eat da Burger" width="600"/>
+        </div>
+
+        {{{body}}}
+
+      <footer class="page-footer">
+        <div class="footer-copyright">
+          <div class="container">
+              <span class="white-text">Eat 'da Burger Full-Stack App is developed by Summit Media Design, LLC</span>
+              <a class="grey-text text-lighten-4 right" href="https://github.com/summitmedia1">To See More Development Work...</a>
+              <p class="white-text">2017 Copyright. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
 
       </div>
 
-
-
     </div>
-
   </body>
 </html>
