@@ -5,8 +5,7 @@ var burger = {
 
   // Selects all of the burger entries
   selectAll: function(createBurger){
-    orm.selectAll('burgers', function(res)
-  {
+    orm.selectAll('burgers', function(res){
     createBurger(res);
   });
 },
@@ -16,8 +15,8 @@ var burger = {
     });
   },
 
-  updateOne: function(objColVals, conditions, createBurger){
-    orm.updateOne('burgers', cols, objColVals, conditions, function(res){
+  updateOne: function(objColVals, condition, createBurger){
+    orm.updateOne('burgers', objColVals, condition, function(res){
       createBurger(res);
     });
   },

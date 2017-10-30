@@ -15,17 +15,18 @@ router.get('/', function(req, res){
 });
 
 // Create a New Burger
-router.post('burgers', function(req, res){
+router.post('/api/burgers', function(req, res){
   burger.insertOne(['burger_name'],
-  [req.body.burger_name], function() {
+  [req.body.burger_name], function(result) {
+    // res.json({ id: result.id });
     res.redirect('/');
   });
 });
 
 // Devour a Burger
-router.put('burgers/:id', function(req, res){
+router.put('/api/burgers/:id', function(req, res){
   var condition = 'id = ' + req.params.id;
-  burger.updateOne ({devoured: true}, condition, function(data) {
+  burger.updateOne ({devoured: true}, condition, function(result) {
       res.redirect('/');
       });
 });

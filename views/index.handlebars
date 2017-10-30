@@ -17,8 +17,7 @@
                         <li>
                           <h6>{{this.id}}. {{this.burger_name}}</h6>
                           <form action="burgers/{{this.id}}. {{this.burger_name}}?_method=PUT" method="POST">
-                            <input style="display: inline-block" type="hidden" value="true" name="devoured">
-                            <button style="display: inline-block" type="submit" class="burgerOrder">{{this.burger_name}}</button>
+                            <button type="submit" class="burgerOrder">{{this.burger_name}}</button>
                           </form>
                         </li>
                       {{/unless}}
@@ -55,7 +54,7 @@
   <h5 class="white-text">ad'Da burger here</h5>
     <div class="row white" style="min-height: 125px">
       <div class="col s12">
-        <form action="/burgers" method="POST">
+        <form action="/api/burgers" method="POST">
           <input type="text" id="burgerName" name="burger_name" placeholder="Which 'Da licious burger do you want to add to our menu?">
           <button align="center" type="submit" class="addBurgerButton">Ad 'Da Burger</button>
         </form>
