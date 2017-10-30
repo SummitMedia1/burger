@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../img/background.png');
+  background-color: black;
+  font-family: Permanent Marker;
+  font-size: 18px;
+}
+
+button, optgroup, select, textarea {
+  min-height: 40px;
+  min-width: 200px;
+  font-family: HelveticaNeue;
+  border-radius: 20px;
+  background-color: #b71c1c;
+  color: #ffff8d !important;
+  border: 2px solid #000000;
+}
+
+footer.page-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: #b71c1c !important;
+    font-family: HelveticaNeue;
+    font-size: 12px;
+}
