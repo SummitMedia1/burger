@@ -25,17 +25,17 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 var orm = {
-  selectAll: function(tableInput, createBurger) {
+  selectAll: function(tableInput, callBack) {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
-      createBurger(result);
+      callBack(result);
     });
   },
-  insertOne: function(table, cols, vals, createBurger) {
-    var queryString = "INSERT INTO " + table;
+  insertOne: function(tableInput, cols, vals, callBack) {
+    var queryString = "INSERT INTO " + tableInput;
 
     queryString += " (";
     queryString += cols.toString();
@@ -51,25 +51,25 @@ var orm = {
         throw err;
       }
 
-      createBurger(result);
+      callBack(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
-  updateOne: function(table, objColVals, condition, createBurger) {
-    var queryString = "UPDATE " + table;
 
-    queryString += " SET ";
-    queryString += objToSql(objColVals);
-    queryString += " WHERE ";
-    queryString += condition;
+  updateOne: function(tableInput, condition, callBack) {
+    // var queryString = "UPDATE " + tableInput + SET ;
+    //
+    // queryString += " SET ";
+    // queryString += objToSql(objColVals);
+    // queryString += " WHERE ";
+    // queryString += condition;
 
-    console.log(queryString);
-    connection.query(queryString, function(err, result) {
+    // console.log(queryString);
+    connection.query('UPDATE '+tableInput+' SET devoured=true WHERE id='+condition+';', function(err, result) {
       if (err) {
         throw err;
       }
 
-      createBurger(result);
+      callBack(result);
     });
   },
 };
