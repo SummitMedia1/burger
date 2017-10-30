@@ -1,5 +1,5 @@
 // Import MySQL connection.
-var connection = require("../config/connection.js");
+var connection = require("./connection.js");
 
 function printQuestionMarks(num) {
   var arr = [];
@@ -72,19 +72,6 @@ var orm = {
       createBurger(result);
     });
   },
-  deleteOne: function(table, condition, createBurger) {
-    var queryString = "DELETE FROM " + table;
-    queryString += " WHERE ";
-    queryString += condition;
-
-    connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
-
-      createBurger(result);
-    });
-  }
 };
 
 // Export the orm object for the model (cat.js).

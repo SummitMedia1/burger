@@ -1,6 +1,8 @@
-// Set app node dependencies and establish PORT setting
+// Node Dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+
 var PORT = process.env.PORT || 3000;
 
 var app = express();
@@ -11,15 +13,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.text({type: 'text/html' }));
 app.use('/public', express.static(__dirname + "/public"));
 
-// Set handlebars in app requirements
-var exphbrs = require('express-handlebars');
+// // override with POST having ?_method=DELETE or PUT
+app.use(methodOverride('_method'));
 
-app.engine('handlebars', exphbrs({ defaultLayout: 'main'}));
+// Set handlebars in app requirements
+var exphbs = require('express-handlebars');
+
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 //Import routes and give app access to them
 var routes = require('./controllers/burgers_controller.js');
 app.use('/', routes);
+
 app.listen(PORT, function(){
   console.log('Your App is listening on PORT ' + PORT);
 });

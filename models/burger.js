@@ -22,12 +22,6 @@ var burger = {
     });
   },
 
-  deleteOne: function(conditions, createBurger){
-    orm.deleteOne('burgers', conditions, function(res){
-      createBurger(res);
-    });
-  }
-
 };
 
 module.exports = burger;
