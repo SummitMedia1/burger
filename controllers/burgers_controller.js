@@ -7,26 +7,22 @@ var burger = require('../models/burger.js');
 // Index page renders all burgers to the DOM
 router.get('/', function(req, res){
   burger.selectAll(function(burger_data){
-    // var hamburgerObj = { burgers: data };
       console.log('Show hamburger object: ' + burger_data);
         res.render('index',{ burger_data });
-        // res.render('index', hamburgerObj);
   });
 });
 
 // Create a New Burger
-router.post('/api/burgers', function(req, res){
-  burger.insertOne(['burger_name'],
-  [req.body.burger_name], function(data) {
-    // res.json({ id: result.id });
+router.post('/burgers/insertOne', function(req, res){
+  burger.insertOne([req.body.burger_name], function(result) {
     res.redirect('/');
+    console.log(req.body.burger_name);
   });
 });
 
 // Devour a Burger
 router.put('/burgers/updateOne', function(req, res){
   burger.updateOne(req.body.id, function(result){
-    console.log(result);
 		res.redirect('/');
       });
 });

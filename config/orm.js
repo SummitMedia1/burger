@@ -26,53 +26,30 @@ function objToSql(ob) {
 // Object for all our SQL statement functions.
 var orm = {
   selectAll: function(tableInput, callBack) {
-    var queryString = "SELECT * FROM " + tableInput + ";";
-    connection.query(queryString, function(err, result) {
+    connection.query("SELECT * FROM "+tableInput+";", function(err, result) {
       if (err) {
         throw err;
       }
       callBack(result);
     });
   },
-  insertOne: function(tableInput, cols, vals, callBack) {
-    var queryString = "INSERT INTO " + tableInput;
 
-    queryString += " (";
-    queryString += cols.toString();
-    queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
-
-    console.log(queryString);
-
-    connection.query(queryString, vals, function(err, result) {
+  insertOne: function(tableInput, vals, callBack) {
+  		connection.query('INSERT INTO '+tableInput+"(burger_name) VALUES ('"+vals+"');", function(err, result){
       if (err) {
         throw err;
       }
-
-      callBack(result);
-    });
-  },
+			   callBack(result);
+		});
+	},
 
   updateOne: function(tableInput, condition, callBack) {
-    // var queryString = "UPDATE " + tableInput + SET ;
-    //
-    // queryString += " SET ";
-    // queryString += objToSql(objColVals);
-    // queryString += " WHERE ";
-    // queryString += condition;
-
-    // console.log(queryString);
     connection.query('UPDATE '+tableInput+' SET devoured=true WHERE id='+condition+';', function(err, result) {
-      if (err) {
-        throw err;
-      }
-
-      callBack(result);
+      if (err) throw err;
+          callBack(result);
     });
   },
 };
 
-// Export the orm object for the model (cat.js).
+// Export the orm object
 module.exports = orm;

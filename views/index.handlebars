@@ -18,7 +18,6 @@
                           <h6>{{this.id}}. {{this.burger_name}}</h6>
                           <form action="/burgers/updateOne?_method=PUT" method="POST">
                             <input type="hidden" name="id" type="text" value={{this.id}} />
-                            <br />
                             <button type="submit" class="burgerOrder">Devour ME now!</button>
                           </form>
                         </li>
@@ -56,7 +55,7 @@
   <h5 class="white-text">ad'Da burger here</h5>
     <div class="row white" style="min-height: 125px">
       <div class="col s12">
-        <form action="/api/burgers" method="POST">
+        <form action="/burgers/insertOne" method="POST">
           <input type="text" id="burgerName" name="burger_name" placeholder="Which 'Da licious burger do you want to add to our menu?">
           <button align="center" type="submit" class="addBurgerButton">Ad 'Da Burger</button>
         </form>

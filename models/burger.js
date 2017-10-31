@@ -9,17 +9,14 @@ var burger = {
     callBack(res);
   });
 },
-  insertOne: function(cols, vals, callBack){
-    orm.insertOne('burgers', cols, vals, function(res){
-      callBack(res);
-    });
-  },
 
+  insertOne: function(name, callBack){
+    orm.insertOne('burgers', name, callBack);
+
+},
   updateOne: function(id, callBack){
     orm.updateOne('burgers', id, callBack);
 
-  },
-
+  }
 };
-
 module.exports = burger;
