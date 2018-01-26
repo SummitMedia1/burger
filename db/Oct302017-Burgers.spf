@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>tdceb8wja4ponq2a</string>
+			<key>host</key>
+			<string>dyud5fa2qycz1o3v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com</string>
+			<key>name</key>
+			<string>localhost</string>
+			<key>port</key>
+			<integer>3306</integer>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>bn86zgdo7mye43re</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeAClJpZNIeHy0uXxAPTlNN
+			dXRhYmxlU3RyaW5noy0vI1hOU1N0cmluZ9IeHzEyXk5TTXV0YWJs
+			ZUFycmF5ozEzI1dOU0FycmF50h4fIjWiIiNfEA9OU0tleWVkQXJj
+			aGl2ZXLRODlUZGF0YYABAAgAEQAaACMALQAyADcARQBLAFIAWgBl
+			AGwAcAByAHQAdgB6AHwAfgCAAIIAhwCMAJEAugDBAMIAwwDFAMoA
+			1QDeAPQA+AEFAQ4BEwEVARcBGQEeASgBKgEtATIBRAFIAVEBVgFl
+			AWkBcQF2AXkBiwGOAZMAAAAAAAACAQAAAAAAAAA6AAAAAAAAAAAA
+			AAAAAAABlQ==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {913, 607}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>INSERT INTO burgers (burger_name, devoured) VALUES ('16oz. Steak Burger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Angus Burger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Barbecue Burger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Butter Burger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Cheese Burger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Sliders X3',false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Veggie Burger', false);
+</string>
+			<key>table</key>
+			<string>burgers</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>153</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>INSERT INTO burgers (burger_name, devoured) VALUES ('16oz. Steak Burger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Angus Burger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Barbecue Burger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Butter Burger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Cheese Burger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Sliders X3',false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Veggie Burger', false)</string>
+		<string>CREATE DATABASE burgers_db;
+USE burgers_db;
+CREATE TABLE `burgers`(
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`burger_name` varchar(255) NOT NULL,
+`devoured` BOOLEAN DEFAULT false,
+`ts` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+`dt` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+PRIMARY KEY(id)
+)</string>
+		<string>ALTER TABLE burgers AUTO_INCREMENT = 1</string>
+		<string>INSERT INTO burgers (burger_name, devoured) VALUES ('16oz. Steak Burger', true),
+INSERT INTO burgers (burger_name, devoured) VALUES ('Angus Burger', false),
+INSERT INTO burgers (burger_name, devoured) VALUES ('Barbecue Burger', false),
+INSERT INTO burgers (burger_name, devoured) VALUES ('Butter Burger', true),
+INSERT INTO burgers (burger_name, devoured) VALUES ('Cheese Burger', true),
+INSERT INTO burgers (burger_name, devoured) VALUES ('Sliders X3',false),
+INSERT INTO burgers (burger_name, devoured) VALUES ('Veggie Burger', false),</string>
+		<string>CREATE TABLE `burgers`(
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`burger_name` varchar(255) NOT NULL,
+`devoured` BOOLEAN DEFAULT false,
+`ts` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+`dt` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+PRIMARY KEY(id)
+)</string>
+		<string>CREATE TABLE `burgers`(
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`burger_name` varchar(255) NOT NULL,
+`devoured` BOOLEAN DEFAULT false,
+`ts` TIMESTAMP CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+`dt` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+PRIMARY KEY(id)
+)</string>
+		<string>(
+`id` int(11) NOT NULL AUTO_INCREMENT
+`burger_name` varchar(255) NOT NULL
+`devoured` BOOLEAN DEFAULT false
+`ts` TIMESTAMP CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+`dt` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+PRIMARY KEY(id)
+
+)</string>
+		<string>`burger_name` varchar(150) NOT NULL
+`devoured` BOOLEAN DEFAULT false
+`ts` TIMEST</string>
+		<string>CREATE TABLE `burgers`
+
+(
+`id` int(11) NOT NULL AUTO_INCREMENT
+`burger_name` varchar(150) NOT NULL
+`devoured` BOOLEAN DEFAULT false
+`ts` TIMESTAMP CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+`dt` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+PRIMARY KEY(id)
+
+)</string>
+		<string>(
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`burger_name` varchar(150) NOT NULL,
+`devoured` BOOLEAN DEFAULT false,
+`ts` TIMESTAMP CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+`dt` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+PRIMARY KEY(id)
+
+)</string>
+		<string>CREATE TABLE burgers
+
+(
+id int NOT NULL AUTO_INCREMENT,</string>
+		<string>(
+id int NOT NULL AUTO_INCREMENT,
+burger_name varchar(150) NOT NULL,
+devoured BOOLEAN DEFAULT false,
+ts TIMESTAMP CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+dt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+PRIMARY KEY(id)
+
+)</string>
+		<string>CREATE TABLE burgers
+
+{
+id int NOT NULL AUTO_INCREMENT,
+burger_name varchar(150) NOT NULL,
+devoured BOOLEAN DEFAULT false,
+ts TIMESTAMP CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+dt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+PRIMARY KEY(id)
+
+}</string>
+		<string>CREATE TABLE burgers
+
+{
+id int NOT NULL AUTO_INCREMENT,
+burger_name NOT NULL varchar(150),
+devoured BOOLEAN DEFAULT false,
+ts TIMESTAMP CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+dt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+PRIMARY KEY(id)
+
+}</string>
+		<string>CREATE TABLE burgers</string>
+		<string>USE burgers_db</string>
+		<string>CREATE DATABASE burgers_db</string>
+		<string>CREATE DATABASE burgers_db
+USE burgers_db</string>
+		<string>SET PASSWORD FOR 'root'@'localhost' = PASSWORD('')</string>
+		<string>INSERT INTO clients (client_name) VALUES ('Bilal');
+INSERT INTO clients (client_name) VALUES ('Brianne');
+INSERT INTO clients (client_name) VALUES ('Vincent');
+INSERT INTO parties (party_name, party_type, party_cost, client_id) VALUES ('Everybody Loves Raymond', 'tv', 500, 1);
+INSERT INTO parties (party_name, party_type, party_cost, client_id) VALUES ('Big Bang Theory', 'tv', 900, 1);
+INSERT INTO parties (party_name, party_type, party_cost, client_id) VALUES ('Top Gun', 'movie', 200, 2);
+INSERT INTO parties (party_name, party_type, party_cost, client_id) VALUES ('Whiskey', 'grown-up', 300, 2);
+INSERT INTO parties (party_name, party_type, party_cost, client_id) VALUES ('Cigar', 'grown-up', 250, 3)</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.17-log</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
